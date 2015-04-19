@@ -1,4 +1,4 @@
-package cloudsimulator.test1;
+package cz.cuni.mff.d3s.jdeeco.cloudsimulator.test1;
 
 import cz.cuni.mff.d3s.deeco.annotations.Component;
 import cz.cuni.mff.d3s.deeco.annotations.In;

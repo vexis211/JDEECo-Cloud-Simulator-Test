@@ -1,4 +1,4 @@
-package cloudsimulator.test1;
+package cz.cuni.mff.d3s.jdeeco.cloudsimulator.test1;
 
 import java.io.IOException;
 

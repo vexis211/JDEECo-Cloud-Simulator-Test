@@ -22,6 +22,8 @@
 		<objenesis.version>1.2</objenesis.version>
 		<cloning.version>1.9.0</cloning.version>
 
+		<jdeeco.version>2.0.0</jdeeco.version>
+
 		<!-- plugin versions -->
 		<maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
 		<maven-eclipse-plugin.version>2.9</maven-eclipse-plugin.version>
@@ -36,6 +38,15 @@
 		<developerConnection>scm:git:https://github.com/vexis211/JDEECo-Cloud-Simulator-Test.git</developerConnection>
 		<url>https://github.com/vexis211/JDEECo-Cloud-Simulator-Test</url>
 	</scm>
+
+	<repositories>
+		<repository>
+			<id>ProjectLibraries</id>
+			<name>Repository in project's lib subdirectory</name>
+			<layout>default</layout>
+			<url>file:///${project.basedir}/lib</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<!-- Log4j - logging -->
@@ -90,16 +101,13 @@
 		<dependency>
 			<groupId>cz.cuni.mff.d3s.jdeeco</groupId>
 			<artifactId>cz.cuni.mff.d3s.jdeeco.core</artifactId>
-			<version>2.0.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/cz.cuni.mff.d3s.jdeeco.core-2.0.0.jar</systemPath>
+			<version>${jdeeco.version}</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>cz.cuni.mff.d3s.jdeeco</groupId>
 			<artifactId>cz.cuni.mff.d3s.jdeeco.simulation</artifactId>
-			<version>2.0.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/cz.cuni.mff.d3s.jdeeco.simulation-2.0.0.jar</systemPath>
+			<version>${jdeeco.version}</version>
 		</dependency>
 
 	</dependencies>
@@ -147,7 +155,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>cloudsimulator.test1</mainClass>
+							<mainClass>cz.cuni.mff.d3s.jdeeco.cloudsimulator.test1.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
