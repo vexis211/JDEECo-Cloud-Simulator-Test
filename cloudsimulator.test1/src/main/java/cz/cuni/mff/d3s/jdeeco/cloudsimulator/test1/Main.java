@@ -1,5 +1,6 @@
 package cz.cuni.mff.d3s.jdeeco.cloudsimulator.test1;
 
+import java.io.File;
 import java.io.IOException;
 
 import cz.cuni.mff.d3s.deeco.annotations.processor.AnnotationProcessor;
@@ -17,6 +18,11 @@ public class Main {
 
 	public static void main(String[] args) throws AnnotationProcessorException,
 			IOException, InterruptedException {
+		// create logs directory
+		// TODO get logs dir from resources
+		File logsDir = new File("logs");
+		logsDir.mkdirs();
+		
 		AnnotationProcessor processor = new AnnotationProcessor(
 				RuntimeMetadataFactoryExt.eINSTANCE);
 		RuntimeMetadata model = RuntimeMetadataFactoryExt.eINSTANCE
