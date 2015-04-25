@@ -31,7 +31,6 @@ public class HelloWorld {
 	@Process
 	@PeriodicScheduling(period = 1000)
 	public static void sayHello(@In("id") String id) {
-
 		System.out.println("Hello world!");
 	}
 
@@ -40,9 +39,7 @@ public class HelloWorld {
 	 */
 	@Process
 	@PeriodicScheduling(period = 500)
-	public static void updateCounter(
-			@InOut("counter") ParamHolder<Integer> counter) {
-
+	public static void updateCounter(@InOut("counter") ParamHolder<Integer> counter) {
 		counter.value++;
 		System.out.println("... counter incremented to " + counter.value);
 	}
