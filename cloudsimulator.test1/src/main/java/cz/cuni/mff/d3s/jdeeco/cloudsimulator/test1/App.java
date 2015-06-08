@@ -1,9 +1,9 @@
 package cz.cuni.mff.d3s.jdeeco.cloudsimulator.test1;
 
-import cz.cuni.mff.d3s.jdeeco.cloudsimulator.simulation.SimulationBootstrapper;
-import cz.cuni.mff.d3s.jdeeco.cloudsimulator.simulation.SimulationBootstrapperImpl;
-import cz.cuni.mff.d3s.jdeeco.cloudsimulator.simulation.SimulationStartParameters;
-import cz.cuni.mff.d3s.jdeeco.cloudsimulator.simulation.SimulationStartParametersImpl;
+import cz.cuni.mff.d3s.jdeeco.cloudsimulator.simulation.startup.SimulationBootstrapper;
+import cz.cuni.mff.d3s.jdeeco.cloudsimulator.simulation.startup.SimulationBootstrapperImpl;
+import cz.cuni.mff.d3s.jdeeco.cloudsimulator.simulation.startup.SimulationStartParameters;
+import cz.cuni.mff.d3s.jdeeco.cloudsimulator.simulation.startup.SimulationStartParametersImpl;
 
 /**
  * Hello world!
@@ -21,5 +21,7 @@ public class App
 		
 		SimulationStartParameters startParameters = new SimulationStartParametersImpl(rootComponent);
 		bootstrapper.startSimulation(startParameters);
+		
+		bootstrapper.dispose();
     }
 }
