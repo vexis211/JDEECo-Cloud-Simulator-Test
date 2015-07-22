@@ -20,12 +20,6 @@
 			<name>My D3S maven repository</name>
 			<url>https://gitlab.d3s.mff.cuni.cz:8443/nexus/content/repositories/skalicky</url>
 		</repository>
-		<repository>
-			<id>ProjectLibraries</id>
-			<name>Repository in project's lib subdirectory</name>
-			<layout>default</layout>
-			<url>file:///${project.basedir}/lib</url>
-		</repository>
 	</repositories>
 
 	<dependencies>
@@ -94,18 +88,32 @@
 			<version>4.1.1.RELEASE</version>
 		</dependency>
 
-		<!-- JDEECo -->
+		<!-- JDEECo -->		
 		<dependency>
 			<groupId>cz.cuni.mff.d3s.jdeeco</groupId>
 			<artifactId>cz.cuni.mff.d3s.jdeeco.core</artifactId>
-			<version>2.0.0</version>
+			<version>3.0.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>cz.cuni.mff.d3s.jdeeco</groupId>
-			<artifactId>cz.cuni.mff.d3s.jdeeco.simulation</artifactId>
-			<version>2.0.0</version>
+			<artifactId>cz.cuni.mff.d3s.jdeeco.network</artifactId>
+			<version>3.0.1</version>
 		</dependency>
+		<dependency>
+			<groupId>cz.cuni.mff.d3s.jdeeco</groupId>
+			<artifactId>cz.cuni.mff.d3s.jdeeco.network.omnet</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>cz.cuni.mff.d3s.jdeeco</groupId>
+			<artifactId>cz.cuni.mff.d3s.jdeeco.network.matsim</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>cz.cuni.mff.d3s.jdeeco</groupId>
+			<artifactId>cz.cuni.mff.d3s.jdeeco.network.matsim-omnet</artifactId>
+			<version>3.0.1</version>
+		</dependency> -->
 	</dependencies>
 
 	<build>

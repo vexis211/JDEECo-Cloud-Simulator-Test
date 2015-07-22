@@ -21,7 +21,7 @@ public class HelloWorld {
 	/**
 	 * Output of count process
 	 */
-	public int counter;
+	public Integer counter;
 
 	public HelloWorld(String id) {
 		this.id = id;
@@ -38,7 +38,7 @@ public class HelloWorld {
 //		
 		System.out.println("Hello world!");
 //		
-//		Statistics.Write("sayHello");
+//		Statistics.Write("hello");
 //		Assert.assertEquals("For testing", id, "HELLO");
 
 //		Timer.stop("sayHello");
@@ -50,6 +50,7 @@ public class HelloWorld {
 	@Process
 	@PeriodicScheduling(period = 500)
 	public static void updateCounter(@InOut("counter") ParamHolder<Integer> counter) {
+		Statistics.Write("counter", 1);
 		counter.value++;
 		System.out.println("... counter incremented to " + counter.value);
 	}

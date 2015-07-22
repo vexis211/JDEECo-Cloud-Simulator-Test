@@ -1,0 +1,35 @@
+<SimulationSettings>
+  <SimulationRuns>
+    <SimulationRunProfiles>
+      <SimulationRunProfile Id="default">
+        <SimulationEnd Type="SimulationTime" Time="60000"/>
+      </SimulationRunProfile>
+    </SimulationRunProfiles>
+  </SimulationRuns>
+  <Asserts>
+    <DefaultAssert Actions="Log"/>
+    <AssertProfiles>
+      <AssertProfile Id="default">
+        <DefaultAssert Actions=""/>
+        <AssertGroup Id="Severe" Actions="ExitRun"/>
+      </AssertProfile>
+    </AssertProfiles>
+  </Asserts>
+  <Statistics>
+    <DefaultStatistic Save="Count"/>
+    <StatisticProfiles>
+      <StatisticProfile Id="default">
+        <DefaultStatistic Save="Min"/>
+        <Statistic Type="Plain" Id="hello" Save="Count"/>
+        <Statistic Type="Plain" Id="counter" Save="Count"/>
+      </StatisticProfile>
+      <StatisticProfile Id="profile2">
+        <DefaultStatistic Save="Min,Max,Avg,Vector"/>
+        <Import ProfileId="profile1"/>
+        <Import ProfileId="profile1"/>
+        <Statistic Type="Plain" Id="HELLO" Save="Count"/>
+        <Statistic Type="Regex" Id="BYE" Save="Vector"/>
+      </StatisticProfile>
+    </StatisticProfiles>
+  </Statistics>
+</SimulationSettings>
