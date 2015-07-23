@@ -1,6 +1,7 @@
 /Servers
 .metadata/
 .settings/
+.recommenders/
 .classpath
 .project
 .springBeans

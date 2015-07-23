@@ -6,9 +6,7 @@ import cz.cuni.mff.d3s.deeco.annotations.InOut;
 import cz.cuni.mff.d3s.deeco.annotations.PeriodicScheduling;
 import cz.cuni.mff.d3s.deeco.annotations.Process;
 import cz.cuni.mff.d3s.deeco.task.ParamHolder;
-import cz.cuni.mff.d3s.jdeeco.cloudsimulator.asserts.Assert;
 import cz.cuni.mff.d3s.jdeeco.cloudsimulator.statistics.Statistics;
-import cz.cuni.mff.d3s.jdeeco.cloudsimulator.timers.Timer;
 
 @Component
 public class HelloWorld {
